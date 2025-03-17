@@ -1,0 +1,68 @@
+[project]
+name = "spar-api"
+version = "0.1.0"
+description = "This project contains APIs related to the SPAR"
+readme = "README.md"
+authors = [
+    "Anthony Malkoun <https://www.linkedin.com/in/anthony-malkoun>",
+    "Henry Obegi <https://www.linkedin.com/in/henryobegi>",
+]
+requires-python = ">=3.11"
+dependencies = [
+    "alembic>=1.14.1",
+    "psycopg2>=2.9.10",
+    "sqlmodel>=0.0.22",
+    "pydantic>=2.10.6",
+    "passlib[bcrypt]>=1.7.4",
+    "python-jose>=3.4.0",
+    "boto3>=1.36.25",
+    "httpx>=0.27.2",
+    "openai>=1.59.9",
+    "rich>=13.9.4",
+    "devtools>=0.12.2",
+    "numpy>=1.26.4",
+    "pandas>=2.2.3",
+    "assemblyai>=0.37.0",
+    "groq>=0.18.0",
+    "anthropic>=0.46.0",
+    "mirascope[openai,tenacity]>=1.18.4",
+    "langfuse>=2.59.3",
+    "botocore>=1.36.25",
+    "asyncssh>=2.20.0",
+    "pybars3>=0.9.7",
+    "slowapi>=0.1.9",
+    "deepgram-sdk>=3.8.0",
+    "fastapi>=0.115.8",
+    "gunicorn>=23.0.0",
+    "pydantic-settings>=2.7.1",
+    "python-dotenv>=1.0.1",
+    "python-multipart>=0.0.20",
+    "redis>=5.2.1",
+    "sentry-sdk[fastapi]>=2.20.0",
+    "uvicorn>=0.34.0",
+]
+
+
+[dependency-groups]
+dev = [
+    "black>=25.1.0",
+    "isort>=5.13.2",
+    "pre-commit>=4.1.0",
+    "pylint>=3.3.4",
+    "pylint-pydantic>=0.3.5",
+    "ruff>=0.9.6",
+]
+
+
+[tool.black]
+line-length = 120
+
+
+[tool.ruff]
+ignore = ["E501"]
+line-length = 120
+
+
+[tool.pylint.messages_control]
+max-line-length = 120
+disable = ["missing-class-docstring", "missing-function-docstring", "invalid-name", "unspecified-encoding", "missing-module-docstring"]

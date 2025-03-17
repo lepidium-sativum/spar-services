@@ -1,0 +1,8 @@
+{
+  "restartable": "rs",
+  "exec": "node -r dotenv/config ./src/index.js dotenv_config_debug=true",
+  "ignore": [".git", "node_modules/**/node_modules"],
+  "verbose": false,
+  "watch": ["src"],
+  "ext": "js json"
+}

@@ -1,0 +1,79 @@
+[
+  {
+    "provider": "azure",
+    "lang": "English",
+    "locale": "en-US",
+    "gender": "male",
+    "voice": "en-US-JasonNeural"
+  },
+  {
+    "provider": "azure",
+    "lang": "English",
+    "locale": "en-US",
+    "gender": "male",
+    "voice": "en-US-Christopher"
+  },
+  {
+    "provider": "azure",
+    "lang": "English",
+    "locale": "en-US",
+    "gender": "male",
+    "voice": "en-US-DavisNeural"
+  },
+  {
+    "provider": "azure",
+    "lang": "English",
+    "locale": "en-US",
+    "gender": "female",
+    "voice": "en-US-AvaMultilingualNeural"
+  },
+  {
+    "provider": "azure",
+    "lang": "English",
+    "locale": "en-US",
+    "gender": "female",
+    "voice": "en-US-NancyNeural"
+  },
+  {
+    "provider": "azure",
+    "lang": "English",
+    "locale": "en-US",
+    "gender": "female",
+    "voice": "en-US-JaneNeural"
+  },
+  {
+    "provider": "azure",
+    "lang": "English",
+    "locale": "en-US",
+    "gender": "female",
+    "voice": "en-US-JennyNeural"
+  },
+  {
+    "provider": "azure",
+    "lang": "French",
+    "locale": "fr-FR",
+    "gender": "male",
+    "voice": "fr-FR-Voice1"
+  },
+  {
+    "provider": "azure",
+    "lang": "French",
+    "locale": "fr-FR",
+    "gender": "male",
+    "voice": "fr-FR-Voice2"
+  },
+  {
+    "provider": "azure",
+    "lang": "French",
+    "locale": "fr-FR",
+    "gender": "female",
+    "voice": "fr-FR-Voice3"
+  },
+  {
+    "provider": "azure",
+    "lang": "French",
+    "locale": "fr-FR",
+    "gender": "female",
+    "voice": "fr-FR-Voice4"
+  }
+]

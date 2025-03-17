@@ -1,0 +1,143 @@
+.btn {
+  @apply text-white font-semibold text-base leading-[normal] transition-all duration-[2s] ease-[ease-in-out] px-6 py-4 rounded-[50px] whitespace-nowrap;
+}
+
+.btn-outline {
+  @apply border transition-all duration-[0.3s] ease-[ease-in-out] border-solid border-white fill-white;
+}
+
+.btn-outline:hover {
+  @apply text-[var(--primary)] border-[var(--primary)] fill-[var(--primary)];
+}
+
+.btn.medium {
+  @apply text-xs px-[18px] py-3;
+}
+
+.btn-gradient {
+  background: linear-gradient(86.17deg, #acffba 0%, #6ce47f 100%);
+  color: #000;
+  border: 1px solid #daffe0;
+}
+
+.btn-gradient-red {
+  width: 248px;
+  height: 50px;
+  background: #b11f0e;
+  color: #ffffff;
+  border: 1px solid #daffe0;
+  border-radius: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.btn-gradient-white {
+  width: 150px;
+  height: 44px;
+  background: #ffffff;
+  color: #344054;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.btn-gradient-white:active {
+  background: #515853;
+  border-color: #004099;
+  color: #ffffff;
+}
+.btn-gradient-White {
+  width: 200px;
+  height: 44px;
+  background: #ffffff;
+  color: #344054;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.btn-gradient-White:active {
+  background: #bae7c2;
+  border-color: #004099;
+  color: #000;
+}
+.btn-gradient-blue {
+  width: 101px;
+  height: 50px;
+  background: #0070ff;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.btn-gradient-blue:active {
+  background: #bae7c2;
+  border-color: #004099;
+  color: #000;
+}
+.btn-gradient-Blue {
+  width: 160px;
+  height: 50px;
+  background: #0070ff;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 1px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.btn-gradient-Blue:active {
+  background: #bae7c2;
+  border-color: #004099;
+  color: #000;
+}
+.btn-gradient-blue-round {
+  font-family: "Montserrat";
+  font-size: 12px;
+  width: 140px;
+  height: 32px;
+  background: #0070ff;
+  color: #ffffff;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.btn-gradient-blue-round-sm {
+  font-family: "Montserrat";
+  font-size: 12px;
+  width: 119px;
+  height: 40px;
+  background: #0070ff;
+  color: #ffffff;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.btn-gradient-blue-round-lg {
+  font-family: "Montserrat";
+  font-size: 12px;
+  width: 226px;
+  height: 40px;
+  background: #0070ff;
+  color: #ffffff;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.btn-gradient-blue-round:active {
+  background: #bae7c2;
+  border-color: #004099;
+  color: #000;
+}
+.btn-gradient-back {
+  background: #928c8c;
+  color: #ffffff;
+  border: 1px solid #daffe0;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(0deg, #d3fcda, #d3fcda);
+}
+.trash-icon {
+  fill: black; /* Change color to black */
+}

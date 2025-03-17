@@ -1,0 +1,6 @@
+[
+  {
+    "provider": "azure",
+    "regions": ["francecentral", "eastus", "westus", "westus2"]
+  }
+]

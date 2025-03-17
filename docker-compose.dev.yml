@@ -1,0 +1,111 @@
+# ${VARIABLE:-default} evaluates to default if VARIABLE is unset or empty in the environment.
+# ${VARIABLE-default} evaluates to default only if VARIABLE is unset in the environment.
+# ${VARIABLE:?err} exits with an error message containing err if VARIABLE is unset or empty in the environment.
+# ${VARIABLE?err} exits with an error message containing err if VARIABLE is unset in the environment.
+
+networks:
+  webnet:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  redis-data:
+
+
+services:
+  db:
+    image: "postgres:16-alpine"
+    user: postgres
+    environment:
+      POSTGRES_DB: sparmvp
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: sp@RHenry
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready", "-q", "-d", "sparmvp", "-U", "postgres"]
+      interval: 5s
+      timeout: 4s
+      start_period: 10s
+      retries: 10
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - webnet
+
+  redis:
+    image: "redis/redis-stack:latest"
+    volumes:
+      - redis-data:/data
+    ports:
+      - "6379:6379"
+      - "8001:8001"
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      start_period: 20s
+    networks:
+      - webnet
+
+  backend:
+    env_file:
+      - ./backend/.env
+    build:
+      context: ./backend
+      target: app
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/app:/backend/app
+    environment:
+      SPAR_ENVIRONMENT: "${SPAR_ENVIRONMENT:-LOCAL}"
+      RUN_MIGRATIONS: "true"
+      # Override DB_HOST and REDIS_URL to use the docker service names
+      DB_HOST: db
+      REDIS_URL: redis://redis:6379
+    networks:
+      - webnet
+
+  frontend-sales-app:
+    env_file:
+      - ./frontend-sales-app/.env
+    build:
+      context: ./frontend-sales-app
+    depends_on:
+      - backend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend-sales-app/src:/app/src
+    networks:
+      - webnet
+
+  frontend-internal-admin:
+    env_file:
+      - ./frontend-internal-admin/.env
+    build:
+      context: ./frontend-internal-admin
+    depends_on:
+      - backend
+    ports:
+      - "5174:5173"
+    volumes:
+      - ./frontend-internal-admin/src:/app/src
+    networks:
+      - webnet
+
+  # tts:
+  #   env_file:
+  #     - ./tts/.env
+  #   build:
+  #     context: ./tts
+  #   ports:
+  #     - "3000:3000"
+  #   networks:
+  #     - webnet

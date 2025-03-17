@@ -1,0 +1,10 @@
+class ErrorCode:
+    MODULE_NOT_FOUND = "Module not found with the given Id."
+    MODULE_ALREADY_EXISTS = "Module already exists."
+    OBJECTIVE_NOT_FOUND = "Objective not found with the given Id."
+    OBJECTIVE_ALREADY_EXISTS = "An objective with this title already exists"
+    CONSIDERATION_NOT_FOUND = "Consideration not found with the given Id."
+    CONSIDERATION_ALREADY_EXISTS = "A consideration with this title already exists"
+    TEMPLATE_NOT_FOUND = "Template not found"
+    TEMPLATE_MISSING_PLACEHOLDER = "Missing placeholder"
+    MODULE_NOT_ASSIGNED = "This module is not assigned to this user "

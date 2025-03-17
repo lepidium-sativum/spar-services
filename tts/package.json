@@ -1,0 +1,50 @@
+{
+  "name": "spar-tts",
+  "version": "1.1.0",
+  "description": "A TTS service to serve the TTS part of the Spar project",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "staging": "DOTENV_CONFIG_PATH='.env' pm2 start ./src/index.js --node-args '-r dotenv/config' --name='spar-tts-service'",
+    "build": "rimraf ./build && echo 'rimraf done' && tsc && echo 'TypeScript compilation done'",
+    "start": "npm run build && ENV=PROD node build/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --config --write .prettierrc ./**/*.ts",
+    "pretty": "prettier --write \"./**/*.{js,jsx,ts,tsx,json}\""
+  },
+  "engines": {
+    "node": ">=22.11.0"
+  },
+  "keywords": [
+    "tts",
+    "ue",
+    "blueprint",
+    "mh",
+    "websockets"
+  ],
+  "author": "Abdul Qavi (aqavi07@gmail.com)",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "elastic-apm-node": "^4.5.3",
+    "express": "^4.18.2",
+    "express-list-endpoints": "^6.0.0",
+    "helmet": "^7.1.0",
+    "ioredis": "^5.4.2",
+    "lodash": "^4.17.21",
+    "microsoft-cognitiveservices-speech-sdk": "^1.35.0",
+    "pino": "^8.19.0",
+    "pino-pretty": "^10.3.1",
+    "socket.io": "^4.7.4"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.1",
+    "@semantic-release/npm": "^12.0.1",
+    "nodemon": "^3.0.3",
+    "semantic-release": "^24.2.0"
+  }
+}

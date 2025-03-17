@@ -1,0 +1,66 @@
+[
+  {
+    "title": "Recommend an adequate gift",
+    "summary": "The salesperson made basic attempts to understand customer needs but failed to gather detailed information for a truly personalized recommendation.",
+    "evidence_and_analysis": [
+      {
+        "analysis": "This was the only clear, direct question asked about SPAR's services, showing minimal engagement.",
+        "evidence_type": "negative",
+        "quote": "Okay. Uh, and how much you charge?",
+        "timestamp": "01:29-01:33"
+      },
+      {
+        "timestamp": "01:18-01:27",
+        "analysis": "This was the only clear, direct question asked about SPAR's services, showing minimal engagement.",
+        "evidence_type": "positive",
+        "quote": "Okay. Uh, and how much you charge?"
+      }
+    ],
+    "improvement_actions": "Ask about fianc\u00e9e's current perfume preferences\nInquire about occasions when she wears perfume\nDiscuss specific fragrance notes she might enjoy",
+    "score": 4
+  },
+  {
+    "title": "Be patient and respectful",
+    "summary": "The salesperson showed decreasing patience throughout the interaction, becoming dismissive by the end.",
+    "evidence_and_analysis": [
+      {
+        "timestamp": "04:44-04:49",
+        "quote": "I'm sorry. This is just a perfume. You can buy it or you can leave it.",
+        "analysis": "Shows complete breakdown of professional patience and respect.",
+        "evidence_type": "positive"
+      },
+      {
+        "timestamp": "04:55-04:57",
+        "quote": "No, I told you before, no.",
+        "analysis": "Demonstrates frustration and impatience with repeated questions.",
+        "evidence_type": "negative"
+      },
+      {
+        "timestamp": "05:01-05:15",
+        "analysis": "Demonstrates frustration and impatience with repeated questions.",
+        "evidence_type": "negative"
+      }
+    ],
+    "improvement_actions": "Maintain professional composure even with repetitive questions\nUse positive language instead of dismissive responses\nPractice active listening techniques",
+    "score": 3
+  },
+  {
+    "title": "Be energetic and confident",
+    "summary": "The salesperson displayed hesitation and uncertainty throughout the conversation.",
+    "evidence_and_analysis": [
+      {
+        "timestamp": "01:42-01:44",
+        "analysis": "I'm, uh, sorry, can you repeat that?",
+        "evidence_type": "negative"
+      },
+      {
+        "timestamp": "05:01-05:15",
+        "quote": "No, I told you before, no.",
+        "analysis": "Demonstrates frustration and impatience with repeated questions.",
+        "evidence_type": "negative"
+      }
+    ],
+    "improvement_actions": "Practice product knowledge to speak more confidently\nRemove filler words (\"um,\" \"uh\")\nUse more assertive language",
+    "score": 4
+  }
+]

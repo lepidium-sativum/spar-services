@@ -1,0 +1,33 @@
+{
+  "filler_words": {
+    "assistant": 2,
+    "user": 5,
+    "title": "Total number of fillers words"
+  },
+  "speech_rate": {
+    "assistant": 203.15236427320488,
+    "user": 184.77508650519027,
+    "title": "Average number of words per minute"
+  },
+  "language_complexity": {
+    "assistant": 103,
+    "user": 50,
+    "title": "Total number of unique words"
+  },
+  "average_turn_duration": {
+    "user": "Excelent",
+    "assistant": 5.139,
+    "title": "Your speaking time"
+  },
+  "average_silence_duration": {
+    "user": "Good",
+    "assistant": 2.506200000000002,
+    "title": "Your speaking time"
+  },
+
+  "total_speaking_time": {
+    "assistant": 64.0054801345124,
+    "user": 35.99451986548762,
+    "title": "Your speaking time"
+  }
+}
