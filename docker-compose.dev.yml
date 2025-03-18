@@ -100,12 +100,19 @@ services:
     networks:
       - webnet
 
-  # tts:
-  #   env_file:
-  #     - ./tts/.env
-  #   build:
-  #     context: ./tts
-  #   ports:
-  #     - "3000:3000"
-  #   networks:
-  #     - webnet
+  tts:
+    env_file:
+      - ./tts/.env
+    build:
+      context: ./tts
+    depends_on:
+      redis:
+        condition: service_healthy
+    ports:
+      - "3000:80"
+    # volumes:
+    #   - ./tts/src:/usr/src/app/src
+    environment:
+      REDIS_URL: redis://redis:6379
+    networks:
+      - webnet
