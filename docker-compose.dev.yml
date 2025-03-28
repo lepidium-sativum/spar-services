@@ -69,6 +69,7 @@ services:
       # Override DB_HOST and REDIS_URL to use the docker service names
       DB_HOST: db
       REDIS_URL: redis://redis:6379
+      SALES_LLM_LLAMA3_BASE_URL: http://vllm:8080
     networks:
       - webnet
 

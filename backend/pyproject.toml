@@ -23,7 +23,6 @@ dependencies = [
     "numpy>=1.26.4",
     "pandas>=2.2.3",
     "assemblyai>=0.37.0",
-    "groq>=0.18.0",
     "anthropic>=0.46.0",
     "mirascope[openai,tenacity]>=1.18.4",
     "langfuse>=2.59.3",
