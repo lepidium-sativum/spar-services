@@ -17,6 +17,7 @@ from app.api.llms.clients.sales_llm_llama3_client import (
 
 # sales_llm_prompt
 from app.api.llms.prompts.sales_llm_llama3_prompt import ConversationStatus, generate_random_greeting_message, is_ended
+from app.api.spar.modules.models import AvatarMode
 from app.api.spar.modules.service import check_if_user_assigned_module_async, read_a_module
 from app.api.spar.spars.llm_calls import get_message_emotion
 from app.api.spar.spars.redis_models import SparRedis

@@ -116,3 +116,23 @@ services:
       REDIS_URL: redis://redis:6379
     networks:
       - webnet
+
+  vllm:
+    image: vllm/vllm-openai:latest
+    ports:
+      - "8080:8080"
+    volumes:
+      - ~/.cache/huggingface:/root/.cache/huggingface
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    ipc: host
+    command: --model Qwen/Qwen2.5-0.5B-Instruct --max-model-len 4096 --host 0.0.0.0 --port 8080
+    # FOR LORA: --enable-lora --lora-modules RED=./path-to-lora-model/
+    # WITH MULTI-GPU: --tensor-parallel-size 2
+    networks:
+      - webnet
